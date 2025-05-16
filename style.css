@@ -1,0 +1,113 @@
+:root {
+  --bg: #f0f0f0;
+  --text: #111;
+  --primary: #007bff;
+  --highlight: #28a745;
+}
+
+body.dark {
+  --bg: #1c1c1c;
+  --text: #eee;
+  --primary: #66b2ff;
+  --highlight: #5dd55d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.score-panel {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  font-size: 1.1em;
+}
+
+.input-area {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.choice {
+  font-size: 3em;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.choice:hover {
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.result-display div {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.reset-btn {
+  background: crimson;
+  margin-top: 20px;
+}
+
+#history-log {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#history-log li {
+  padding: 6px;
+  border-bottom: 1px solid #ccc;
+}
